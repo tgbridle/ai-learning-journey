@@ -1,5 +1,31 @@
 # 📓 Discovery Journal: AI Learning Journey
 
+## 🗓️ Entry: 2026-01-03
+
+### 🚀 Progress Summary
+Today I moved from a PRD to a functional **Full-Stack Prototype**. I initialized the project in Lovable, connected it to a Supabase backend, and established a GitHub sync for version control. Most importantly, I began refining the "Alex Moment" by implementing a custom search logic that recognizes German articles (e.g., "Der H" -> "der Hund").
+
+---
+
+### 🧠 Key PM Learnings & Insights
+
+#### 1. Solving for "Natural" Input (Article-Aware Search)
+* **The Learning:** I directed Lovable to tweak the search logic to handle articles (Der/Die/Das) rather than just noun strings.
+* **The "Why":** German learners often recall the article as part of the word itself. If the search is too literal, it creates a "dead end" for the user.
+* **PM Benefit:** This is a classic example of **User Intent over Literal Input**. By making the search "smarter" about German grammar early on, we reduce friction and increase the tool's perceived "intelligence."
+
+#### 2. The GitHub Sync as an Audit Trail
+* **The Learning:** I linked Lovable to my `ai-language-app` repo.
+* **Rationale:** This turns my AI-prompting sessions into a series of **Commits**. It allows for reversibility and provides a technical portfolio that shows *how* the code evolved, not just the final result.
+
+#### 3. Data-First Foundation
+* **The Learning:** I prioritized the Supabase schema over UI aesthetics today.
+* **Takeaway:** A language app is essentially a specialized database. Getting the relational structure right (linking Articles to Lemmas) is more critical for V1 than the color of the search button.
+
+### 🛠️ Technical Architecture
+I have moved to a **Headless Architecture** to ensure the app remains fast and scalable.
+
+
 ## 🗓️ Entry: 2026-01-02
 
 ### 🚀 Progress Summary
