@@ -1,5 +1,52 @@
 # 📓 Discovery Journal: AI Learning Journey
 
+## 🗓️ Entry: 2026-01-04
+
+### 🚀 Progress Summary
+Today I moved from a noun-centric tool to a comprehensive **Language Companion** supporting 8 distinct word types (Verbs, Pronouns, Prepositions, etc.). I refined the product's value proposition with a new action-driven branding ("Search, learn, remember") and implemented an intelligent, color-coded search interface that handles bilingual inputs.
+
+---
+
+### 🧠 Key PM Learnings & Insights
+
+#### 1. The Beachhead Strategy & Adjacency Scaling
+* **The Learning:** I am managing growth by starting with a narrow persona ("Alex") and moving into **Adjacent Use Cases**.
+* **The "Why":** A "Beachhead" allows for focus; scaling happens by adding layers like Verbs or Pronouns to the existing search engine.
+* **PM Benefit:** Using a **Headless Architecture** allows us to scale to new personas or languages by simply adding data columns rather than rewriting the core application.
+
+#### 2. Visual Hierarchy & Cognitive Load
+* **The Learning:** I refactored the sub-header into a two-line "Action/Value" split: *Lookup, understand, apply. Your word companion for learning a language.*
+* **The "Why":** Splitting the text aligns with the natural **F-Pattern** for user scanning, making the app's purpose clear in under two seconds.
+* **Takeaway:** Managing visual hierarchy (like muting search placeholders) reduces cognitive load and directs user attention to the primary task: searching.
+
+#### 3. Product Economics & Scalability
+* **The Learning:** I mapped out a "Zero-Cost Stack" using Vercel, Supabase, and GitHub free tiers.
+* **Rationale:** For an MVP, managing operational viability is critical. We can support hundreds of users before incurring hosting costs.
+* **Impact:** This validates that the product is technically prepared for growth without immediate financial overhead.
+
+---
+
+### 🛠️ Technical Architecture
+The app has evolved into a **Polymorphic Dictionary** where a single search interface handles multiple data structures.
+
+The application is built on a Client-Side Heavy, Headless Architecture where the React frontend manages the logic and Supabase serves as a flexible data store.
+
+Data Flow Summary:
+The Search: useDictionarySearch strips German articles (der/die/das) from user input to ensure accurate fuzzy matching.
+
+The Result: The UI toggles between the SearchBar and WordDeepDive based on the selectedEntryId state.
+
+The Deep-Dive: useDictionaryDetails pulls grammar data from a JSONB metadata column, allowing the UI to render different tables (conjugations vs. declensions) without needing multiple database tables.
+
+<img width="597" height="617" alt="image" src="https://github.com/user-attachments/assets/f72f6b32-23af-4c75-937c-997a12060c54" />
+
+
+### 💡 Next Steps
+- [ ] **Data Verification:** Audit the 80-word seed list in Supabase for grammatical accuracy.
+- [ ] **Component Build:** Validate/ Develop the specific UI grids for other word types conjugations.
+
+
+
 ## 🗓️ Entry: 2026-01-03
 
 ### 🚀 Progress Summary
