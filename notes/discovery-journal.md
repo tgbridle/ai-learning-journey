@@ -1,5 +1,35 @@
 # 📓 Discovery Journal: AI Learning Journey
 
+## 🗓️ Entry: 2026-01-11
+
+### 🚀 Progress Summary
+By the end of this session, we have mapped out unique, high-utility deep-dive templates for all **8 core word types**, ensuring that Langly isn't just a dictionary, but a functional grammar engine.
+
+---
+
+### 🧠 Key PM Learnings & Insights
+
+#### **1. The "Articulated Schema" Breakthrough**
+* **The Learning:** I discovered a critical "data-logic" mismatch. Storing only the noun stem (e.g., "Hund") forced the UI to guess the grammar, resulting in incorrect articles (showing "der Hund" for every case).
+* **The "Why":** In German, the article *is* the grammar. By refactoring the database to store the full phrase (e.g., "den Hund", "dem Hund"), we offloaded complex linguistic logic from the frontend code directly into the data layer.
+* **PM Benefit:** This significantly reduces technical debt and makes the app 100% accurate for irregular words without needing custom code for every edge case.
+
+#### **2. UI Modularity & The "Strict Boundary" Constraint**
+* **The Learning:** As the app grew to support 8 word types, I had to enforce strict "frozen templates" for existing components (like Verbs and Nouns) while building new ones (like Prepositions).
+* **The "Why":** This prevents "Refactor Regression"—where adding a new feature breaks an old one.
+* **Takeaway:** Using specific, isolated prompts for Lovable allowed me to build custom "Logical Rule" displays for Prepositions and Conjunctions without disturbing the "Data Grids" used for Nouns.
+
+#### **3. Branding & Context-Aware Headers**
+* **The Learning:** I consolidated the brand identity by introducing the speech-bubble logo and a new tagline: *"Search, learn, use. Your language companion."*
+* **The "Why":** Identified that "Double Branding" was cluttered. We moved to a brand-heavy home page and a minimalist, content-focused deep-dive page to reduce cognitive load for the learner.
+
+### 🛠️ Next Steps
+
+* **Scalability:** Decide how this will scale up and what I should use for storage (or word lookup) with thousands of words
+* **MVP:** Decide on the 'line in the sand' - I'm keen to publish this when its ready
+* **Testing** I want to learn (and do!) the creation of test cases via Lovable 
+---
+
 ## 🗓️ Entry: 2026-01-04
 
 ### 🚀 Progress Summary
