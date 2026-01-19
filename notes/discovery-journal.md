@@ -1,5 +1,41 @@
 # 📓 Discovery Journal: AI Learning Journey
 
+## 🗓️ Entry: 2026-01-19
+
+### 🚀 Progress Summary
+Today, the project shifted focus from frontend UI templates to backend system architecture. We evaluated the critical "Scaling Crossroads": how to move Langly from a narrow 80-word beachhead to a robust, 10,000+ word "v0" production-ready MVP.
+
+---
+
+### 🧠 Key PM Learnings & Insights
+
+#### **1. The "Certainty" Mandate for Language Learning**
+* **The Learning:** For a grammar-focused app, "Dynamic Generation" (LLMs) is a liability for core data like gender and cases.
+* **The "Why":** A single hallucination (e.g., calling "Hund" neuter) breaks user trust immediately. Accuracy must be "Hard-Coded" in the database, not "Guessed" by a model at runtime.
+* **Takeaway:** We will use a **Local Database (Pre-populated)** as our Source of Truth to ensure instant performance and 100% accuracy.
+
+
+---
+
+### 🏛️ Architectural Decision Matrix: Sourcing & Storage
+
+| Strategy | Accuracy | Performance | Recommendation |
+| :--- | :--- | :--- | :--- |
+| **External API** | 🟠 Variable | 🟡 Medium | Too generic; lacks our specific "Articulated Schema" requirements. |
+| **Live LLM** | 🔴 Low (Risk) | 🔴 Slow (3s+) | High cost and risk of grammatical hallucinations. |
+| **AI-to-DB Pipeline** | 🟢 High | 🟢 Instant | **Selected.** AI generates bulk data; humans/scripts validate; Supabase stores. |
+
+
+---
+
+### 🛠️ Next Steps: The Langly Roadmap
+
+* **Master Prompt Creation:** Design a "System Prompt" to generate perfectly formatted JSON batches for bulk ingestion into Supabase.
+* **v0 Feature Set** Decide on a v0 feature set that will get this off the ground before the end of March. 
+
+
+# 📓 Discovery Journal: AI Learning Journey
+
 ## 🗓️ Entry: 2026-01-11
 
 ### 🚀 Progress Summary
