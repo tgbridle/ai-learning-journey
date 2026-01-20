@@ -1,5 +1,47 @@
 # 📓 Discovery Journal: AI Learning Journey
 
+## 🗓️ Entry: 2026-01-20
+
+### 🚀 Progress Summary
+Today focused on refining the mobile user experience and strengthening the application's underlying data and documentation. Key improvements were made to search accessibility on small screens, grammatical data coverage, and the formalization of the technical architecture.
+
+---
+
+### 🧠 Key PM Learnings & Insights
+
+#### **1. Mobile-First UX: The Keyboard Collision**
+* **The Learning:** During mobile testing, I identified a critical UX flaw: the search suggestion dropdown was appearing below the input field, which meant it was completely obscured by the on-screen keyboard.
+* **The "Why":** Standard desktop dropdown logic doesn't account for the "real estate heist" committed by mobile keyboards.
+* **The Fix:** Implemented mobile-detection logic to flip the UI. If a mobile device is detected, suggestions now appear **above** the search box, ensuring visibility during active typing.
+
+#### **2. Visual Polish: Case & Readability**
+* **The Learning:** I moved away from "All-Caps" shouting in the UI. 
+* **The Change:** Refactored status indicators like "ALWAYS ACCUSATIVE" to standard sentence case (e.g., "Always Accusative").
+* **The "Why":** Standard casing improves readability and aligns with a more sophisticated, modern brand aesthetic.
+
+#### **3. Data Enrichment: Grammar Insights**
+* **The Learning:** Identified a data gap where most words were missing the "Grammar Insight" context.
+* **The Progress:** Generated missing grammar notes for the current word list to ensure the "Deep-Dive" view provides actual value beyond simple translation.
+
+---
+
+### 🏛️ Architecture & Documentation
+* **Project Formalization:** I worked with the AI to extract a comprehensive breakdown of the Langly tech stack, including the state-based SPA architecture and the modular renderer pattern.
+* **Automated Documentation:** Directed the AI to write these technical specifications and data schemas directly to the GitHub repository to ensure the "Source of Truth" remains synchronized with the code.
+
+---
+
+### 🛠️ Next Steps: The Langly Roadmap
+
+* **Schema Validation:** Verify that the newly generated grammar notes are rendering correctly within the Indigo/Teal/Magenta borders of the Deep-Dive views.
+* **Master Prompt Creation:** Design a "System Prompt" to generate perfectly formatted JSON batches for bulk ingestion into Supabase.
+* **v0 Feature Set** Decide on a v0 feature set that will get this off the ground before the end of March.
+* * **Testing:** Before I populate the whole database - I want to create test cases via Lovable to test the app in and out.
+* * **Mass data creation!:** Now I've decided on an approach to populate the database - I want to start putting this in place.
+
+
+# 📓 Discovery Journal: AI Learning Journey
+
 ## 🗓️ Entry: 2026-01-19
 
 ### 🚀 Progress Summary
