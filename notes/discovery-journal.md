@@ -1,5 +1,59 @@
 # 📓 Discovery Journal: AI Learning Journey
 
+## 🗓️ Entry: 2026-02-16
+
+### 🚀 Progress Summary
+Today marked the **"Go Live"** milestone for Langly. I successfully moved the project from a local development environment to a **production-grade deployment on Vercel**. Simultaneously, I executed a **"Content Surge,"** populating the database with the ~150 most critical words in the German language (Pronouns, Prepositions, Auxiliaries, and high-frequency Nouns).
+
+Crucially, I solved a major UX friction point by implementing **"Smart Search"** logic, ensuring that users can find words regardless of capitalization, umlauts, or grammatical conjugation (e.g., searching "gab" finds "geben").
+
+---
+
+### 🧠 Key PM Learnings & Insights
+
+#### **1. The "Smart Code, Dumb Data" Strategy**
+* **The Learning:** I initially considered storing every possible typo in the database to help users find words. This was unscalable.
+* **The Decision:** I shifted the logic to the **Client-Side**, implementing a `normalizeGerman` function.
+* **The Impact:** The app now strips accents and standardizes casing *before* querying the database. This delivers a "Google-like" search experience (e.g., "kuhl" -> "Kühlschrank") without bloating the backend storage.
+
+#### **2. The "Skeleton First" Data Strategy**
+* **The Learning:** Instead of uploading random vocabulary (e.g., "Zoo animals"), I prioritized the **"Functional Skeleton"** of the language.
+* **The Execution:** We batch-processed the closed word classes first:
+    * **The Spine:** All Pronouns & Prepositions (Case-aware).
+    * **The Muscle:** Top 30 Verbs (Auxiliaries & Modals).
+    * **The Flesh:** Top 30 Nouns (Time, People, Abstract).
+* **PM Takeaway:** This approach ensures the app is linguistically useful for A1 sentence construction immediately, rather than just being a list of nouns.
+
+#### **3. The "Production Reality" Check**
+* **The Milestone:** Deploying to **Vercel** exposed the app to real-world constraints.
+* **Why:** Moving off `localhost` forces us to audit mobile-specific issues like "Touch Target" sizes and "Keyboard Collision" on actual devices.
+
+---
+
+### 🛠️ Technical & Data Stack
+* **Live URL:** https://ai-language-app-74286e9f.vercel.app/
+* **Architecture:** React (Frontend) + Supabase (Backend) + Vercel (Edge Network).
+* **Security:** Performed a "Secret Sweep" of the codebase to ensure no `service_role` keys were hardcoded before preparing for public release. Added `.env` protection to `.gitignore`.
+
+---
+
+### 📋 Action Items & Next Steps
+
+#### **1. Mobile UX Audit (Immediate)**
+* **Task:** Use the app exclusively on mobile for the next 24 hours.
+* **Goal:** Identify specific friction points (e.g., is the "Deep Dive" table readable on a small screen? Does the keyboard cover the search results?).
+
+#### **2. Content "Gap Analysis"**
+* **Task:** Identify the missing A1 vocabulary that prevents daily usage (e.g., "Family" nouns, "Food" basics).
+* **Goal:** Prepare the next batch of ~500 words for ingestion.
+
+#### **3. Repository Housekeeping**
+* **Task:** Rename the repo from `ai-language-app-74286e9f` to `langly-core`.
+* **Task:** Update the `README.md` to reflect the final Vercel/Supabase stack.
+* **Task:** Flip the repository visibility to **Public** to establish the "Building in Public" portfolio.
+
+---
+
 ## 🗓️ Entry: 2026-01-20
 
 ### 🚀 Progress Summary
