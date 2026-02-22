@@ -1,5 +1,42 @@
 # 📓 Discovery Journal: AI Learning Journey
 
+## 🗓️ Entry: 2026-02-22
+
+### 🚀 Progress Summary: The "Professional" Pivot
+Today’s focus was transforming Langly from a functional prototype into a premium, market-ready product. We executed a comprehensive brand overhaul, refined the core search UX to eliminate amateur "duplicate" results, and established the data pipeline for scaling content.
+
+**The North Star:** On track to launch the MVP by the **end of March 2026**.
+
+---
+
+### 🧠 Key PM & Design Insights
+
+#### **1. Branding as a Trust Signal**
+* **The Problem:** The initial "speech bubble" logo felt generic and lacked specialized authority.
+* **The Fix:** Developed the **"Umlaut Anchor"** logo—a custom SVG wordmark that uses vibrant blue-to-purple gradient dots over the 'L' to signal German specificity.
+* **The Impact:** This creates a "Pro" identity and allows for a responsive brand mark that collapses into a compact icon when searching to maximize mobile screen real estate.
+
+#### **2. Search Clarity & Deduplication**
+* **The Problem:** Searching for a common word like "cat" resulted in redundant entries and inconsistent language ordering.
+* **The Fix:** Implemented ID-based deduplication logic and standardized the result format: `[DE] Word — [EN] Translation` with the word type right-aligned.
+* **The Result:** The search experience is now intentional and high-speed, significantly reducing cognitive load for the learner.
+
+#### **3. Contextual Learning (Deep Dive)**
+* **The Milestone:** Enriched the database with simple A1/A2-level example sentences and English translations for existing words.
+* **UX Strategy:** Integrated these into the "Deep Dive" cards to bridge the gap between dictionary lookup and real-world usage.
+
+---
+
+### 📋 Action Items & Roadmap
+
+* **[Goal]** Launch MVP by **March 31, 2026**.
+* **[Immediate] Mobile UX Audit:** Use the app exclusively on a physical device for 24 hours to stress-test the new "Flashcard" layout and search transitions.
+* **[Development] The "Help" Hub:** Build an FAQ section and a simple contact form to establish an early user feedback loop.
+* **[Content] B2 Scale-Up:** Initialize the ingestion pipeline for the remaining vocabulary required for B2 proficiency coverage.
+* **[Housekeeping] Repo Finalization:** Rename the repository to `langly-core` and flip visibility to **Public**.
+
+---
+
 ## 🗓️ Entry: 2026-02-16
 
 ### 🚀 Progress Summary
