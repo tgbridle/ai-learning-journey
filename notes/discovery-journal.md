@@ -1,5 +1,36 @@
 # 📓 Discovery Journal: AI Learning Journey
 
+## 🗓️ Entry: 2026-03-01
+
+### 🚀 Progress Summary: Support & Privacy
+Today's milestone focused on the "Post-Lookup" experience. I implemented a dedicated Help page featuring a streamlined FAQ to clarify the current MVP scope and manage user expectations. To facilitate a direct feedback loop while maintaining total developer privacy, I integrated a contact form powered by the **Resend API**. This ensures my personal email address is never exposed in the client-side code or accessible via browser network inspectors.
+
+**The North Star:** On track to launch the Langly MVP by **March 31, 2026**.
+
+---
+
+### 🧠 Key PM & Technical Insights
+
+#### **1. Secure Communication Channels**
+* **The Problem:** Standard frontend-coded email targets are easily harvested by scraping bots.
+* **The Fix:** Routed form submissions through the Resend API to act as a secure relay.
+* **The Result:** The frontend interacts only with the API, keeping the destination email address completely obfuscated from the public-facing code.
+
+#### **2. Support as a Product Filter**
+* **The Insight:** A Help page serves as a tool to manage "Feature Creep".
+* **The Execution:** Kept FAQs brief and specific to the "Search-only" nature of the MVP.
+* **The Goal:** Focus user attention on the core dictionary engine rather than advanced features (like accounts or saved words) before the v1.0 launch.
+
+---
+
+### 📋 Action Items & Next Steps
+
+* **[Content] B2 Scale-Up:** Define the ingestion pipeline for the remaining ~4,000 words required for full B2 proficiency coverage.
+* **[Housekeeping] Repo Finalization:** Rename the repository to `langly-core` and flip visibility to **Public** to establish the "Building in Public" portfolio.
+* **[Housekeeping] Documentation:** Update the `README.md` to reflect the final technical stack: Vercel, Supabase, and Resend.
+
+---
+
 ## 🗓️ Entry: 2026-02-22
 
 ### 🚀 Progress Summary: The "Professional" Pivot
