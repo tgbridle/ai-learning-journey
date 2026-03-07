@@ -1,4 +1,39 @@
-# 📓 Discovery Journal: AI Learning Journey
+# 📓 Journal: AI Learning Journey
+
+## 🗓️ Entry: 2026-03-07
+
+### 🚀 Progress Summary: Brand & Mobile Hardening
+Today’s session was dedicated to moving past the "AI prototype" aesthetic and finalizing the functional "vibe" of Langly. By sharpening the tagline, deploying a professional dictionary icon, and hardening the mobile UI, the app now signals immediate utility and reliability to the learner.
+
+**The North Star:** Launching the Langly MVP by **March 31, 2026**.
+
+---
+
+### 🧠 Key PM & Design Insights
+
+#### **1. Identity Finalization**
+* **The Tagline:** Swapped aspirational text for a high-utility value prop: **"The 2-Second German Dictionary. Find the word, get the grammar."**
+* **The Icon:** Replaced the generic gradient bubble with a professional "Slick Book" SVG to ground the app in the dictionary niche.
+* **The Copy:** Refined the "What is Langly?" section to be punchy and direct, removing "waffly" descriptions in favor of active learner benefits.
+
+#### **2. Mobile Utility (Form over Function)**
+* **The Fix:** Optimized the "Contact Us" form factor for mobile devices, ensuring input fields and buttons are touch-friendly and don't cause layout overflow on smaller screens.
+
+#### **3. The Color Logic Pivot**
+* **The Decision:** Decided to pivot the UI color system. Instead of coloring words by their type (Noun, Verb, etc.), the app will now use **Gender** as the primary color driver.
+* **The Rationale:** This helps learners internalize *der/die/das* through visual association, which is a higher-value feature for German learners than general part-of-speech coloring.
+
+---
+
+### 📋 Action Items & Next Steps
+
+* **[Database] Bulk Ingestion:** Load the full B2-level vocabulary set (approx. 4,000 words) with gender and example sentences.
+* **[UI] Color System Refactor:** Re-map UI components to trigger colors based on gender (e.g., Masculine/Blue, Feminine/Red, Neuter/Green) rather than word type.
+* **[Housekeeping] Documentation:** Update the `README.md` to reflect the final technical stack: Vercel, Supabase, and Resend.
+
+---
+
+
 
 ## 🗓️ Entry: 2026-03-01
 
