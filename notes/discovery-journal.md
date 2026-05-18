@@ -1,5 +1,41 @@
 # 📓 Journal: AI Learning Journey
 
+## 🗓️ Entry: 2026-05-18
+
+### 🚀 Progress Summary: The Local IDE Pivot & Python Tooling Mastery
+Over the last few weeks, this project underwent a fundamental strategic pivot, transitioning away from high-level front-end prototyping into local backend engineering. The engineering environment was migrated into a dedicated **VS Code** workspace, leveraging a localized **Python** data stack. By stepping away from standard web-app interfaces and building programmatic pipelines to dissect complex time-series datasets, the primary objective shifted from meeting an arbitrary calendar deadline to mastering production-grade data manipulation, local debugging, and local environment isolation.
+
+**The North Star (Old):** Launching the Langly MVP by March 31, 2026.  
+**The North Star (New):** To launch the functional Langly dictionary MVP by July 31, 2026, built on a robust, scalable backend, engineered natively within VS Code utilizing an automated Python pipeline and GitHub Copilot for context-aware pair programming.
+
+---
+
+### 🧠 Key PM & Technical Insights
+
+#### **1. Relational Joins & Data Auditing via Pandas**
+* **The Problem:** Tracking cohort "bench points" across an entire season while explicitly neutralizing anomalies where specific asset deployments (Bench Boost keys) altered the underlying logic.
+* **The Python Execution:** Developed an analytical script using `pd.merge()` to perform a relational `left join` between seasonal history records and the asset deployment ledger. By applying an indicator-driven mask, the active asset weeks were isolated and stripped out. Utilizing **VS Code's Interactive Python Debugger**, variables were inspected mid-execution to verify that the logic cleanly scrubbed the dataset without dropping native rows.
+
+#### **2. Time-Series Segmentation & Boundary Normalization**
+* **The Challenge:** Codifying an asymmetric business rule where users received a complete resource reset at a shifting calendar boundary (the winter mid-season break).
+* **The Python Execution:** Authored a windowing mechanism that split data-arrays based on conditional boundaries (`df['event'] < 20`). To resolve historical skewing, the second half of the data timeline was normalized by programmatically re-indexing the starting event point back to zero ($Event - 19$). This allowed the script to calculate true asset "burn rates" and consumption speed fairly across disparate calendar periods.
+
+#### **3. Vectorized Descriptives & Outlier Interrogation**
+* **The Challenge:** Moving past generic mathematical averages to expose deep psychological behavioral types within the user cohort (e.g., performance volatility and resource stagnation).
+* **The Python Execution:** Leveraged optimized Pandas methods like `.std()` to compute the standard deviation of scores, isolating erratic user profiles from consistent mid-table baselines. Vectorized index lookups—`idxmin()` and `idxmax()`—were executed inside iterative loops to evaluate micro-level snapshots week-by-week. When a massive outlier emerged (one user spending 26 weeks pinned to the bottom of the table), an automated data-audit script was compiled to parse individual event logs, confirming a 24-week consecutive streak.
+
+#### **4. Idempotent Scripting & Workspace Environment Hygiene**
+* **The Architecture:** Consolidated separate experimental code blocks into a structured, production-grade `season_stats.py` script. The pipeline is designed to be completely idempotent: it repeatedly ingests raw logs, runs the analytical matrix, and outputs cleanly structured, sequentially numbered CSVs. Workspace extensions like **Rainbow CSV** inside VS Code were utilized to instantly validate the output structures for immediate ingestion by external visual layout engines.
+
+---
+
+### 📋 Action Items & Next Steps
+
+* **[Data Delivery] Production Run:** Execute the finalized Python pipeline script the moment the closing data logs are fully populated to generate the final analytical outputs.
+* **[Visualization] Layout Import:** Drop the sequentially generated CSVs directly into the Canva table interfaces to populate mobile-optimized, high-contrast visual cards.
+* **[Workspace Transition] Core Repository Re-Initialization:** Pull the main Langly application repository completely into the local VS Code environment. Initialize the Python virtual environment (`venv`), lock down the local dependency graph, and activate **GitHub Copilot** workspace indexing (`@workspace`) to execute a disciplined, high-velocity summer sprint toward the July 31 launch.
+-------
+
 ## 🗓️ Entry: 2026-03-07
 
 ### 🚀 Progress Summary: Brand & Mobile Hardening
